@@ -170,7 +170,7 @@ class RadioButtonRN extends React.Component {
 
                             <View style={[styles.centerProductBox]}>
                                 <Text style={[{
-                                    color: textColor
+                                    color: activeIndex === index ? textActiveColor : textDeactiveColor,
                                 }, textStyle]}>
                                     {item.label}
                                 </Text>
@@ -241,11 +241,10 @@ RadioButtonRN.propTypes = {
     selectedBtn: PropTypes.func,
     activeColor: PropTypes.string,
     deactiveColor: PropTypes.string,
-    // textActiveColor: PropTypes.string,
-    // textDeactiveColor: PropTypes.string,
+    textActiveColor: PropTypes.string,
+    textDeactiveColor: PropTypes.string,
     boxActiveBgColor: PropTypes.string,
     boxDeactiveBgColor: PropTypes.string,
-    textColor: PropTypes.string,
     box: PropTypes.bool,
 };
 
@@ -259,11 +258,12 @@ RadioButtonRN.defaultProps = {
     data: [],
     animationTypes: [],
     selectedBtn: () => {},
+    textActiveColor: "#03a9f4",
+    textDeactiveColor: "#e2e2e2",
     activeColor: '#03a9f4',
     deactiveColor: '#e2e2e2',
     boxActiveBgColor: '#e1f5fe33',
     boxDeactiveBgColor: '#fff',
-    textColor: '#383838',
     box: true,
 };
 
