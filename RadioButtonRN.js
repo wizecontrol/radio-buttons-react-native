@@ -116,7 +116,7 @@ class RadioButtonRN extends React.Component {
 
 	render() {
 		let { activeIndex, fadeAnim, animations } = this.state;
-        let { boxStyle, style, circleSize, textStyle, data, icon, activeColor, deactiveColor, boxActiveBgColor, boxDeactiveBgColor, box, textColor } = this.props;
+        let { boxStyle, style, circleSize, textStyle, data, icon, textActiveColor, textDeactiveColor,  activeColor, deactiveColor, boxActiveBgColor, boxDeactiveBgColor, box, textColor } = this.props;
 
 		return (
             <View style={style}>
